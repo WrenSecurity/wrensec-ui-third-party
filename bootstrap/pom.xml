@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.wrensecurity</groupId>
+    <artifactId>wrensec-ui-third-party</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
+  <groupId>org.forgerock.commons.ui.libs</groupId>
+  <artifactId>bootstrap</artifactId>
+  <version>3.3.5</version>
+  <packaging>pom</packaging>
+
+  <name>Wren Security Third-Party UI - Bootstrap</name>
+  <description>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</description>
+
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>https://github.com/twbs/bootstrap/tree/v3.3.5</distribution>
+      <comments>Copyright (c) 2011-2015 Twitter, Inc</comments>
+    </license>
+  </licenses>
+
+  <properties>
+    <jsPackageFiles>bootstrap-3.3.5-custom.js</jsPackageFiles>
+    <jsClassifier>custom</jsClassifier>
+
+    <cssPackageFiles>bootstrap-3.3.5-custom.css</cssPackageFiles>
+    <cssClassifier>custom</cssClassifier>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.soebes.maven.plugins</groupId>
+        <artifactId>iterator-maven-plugin</artifactId>
+        <!--
+          By default, both JS and CSS executions are automatically inherited.
+          -->
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -66,6 +66,7 @@
   </repositories>
 
   <modules>
+    <module>bootstrap</module>
     <module>bootstrap-dialog</module>
   </modules>
 
