@@ -17,12 +17,12 @@
   <description>Make use of Bootstrap Modal more monkey-friendly.</description>
 
   <licenses>
-     <license>
-        <name>MIT</name>
-        <url>https://github.com/nakupanda/bootstrap3-dialog</url>
-        <distribution>repo</distribution>
-        <comments>Licensed under The MIT License.</comments>
-     </license>
+    <license>
+      <name>MIT</name>
+      <url>https://github.com/nakupanda/bootstrap3-dialog</url>
+      <distribution>repo</distribution>
+      <comments>Licensed under The MIT License.</comments>
+    </license>
   </licenses>
 
   <properties>
