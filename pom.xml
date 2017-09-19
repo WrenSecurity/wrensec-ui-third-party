@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   The contents of this file are subject to the terms of the Common Development
+   and Distribution License (the License). You may not use this file except in
+   compliance with the License.
+
+   You can obtain a copy of the License at legal/CDDLv1.0.txt. See the License
+   for the specific language governing permission and limitations under the
+   License.
+
+   When distributing Covered Software, include this CDDL Header Notice in each
+   file and include the License file at legal/CDDLv1.0.txt. If applicable, add
+   the following below the CDDL Header, with the fields enclosed by brackets []
+   replaced by your own identifying information: "Portions copyright [year]
+   [name of copyright owner]".
+
+   Copyright 2017 Wren Security.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.forgerock</groupId>
+    <artifactId>forgerock-parent</artifactId>
+    <version>2.0.7</version>
+  </parent>
+
+  <groupId>org.wrensecurity</groupId>
+  <artifactId>wrensec-ui-third-party</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <name>Wren Security Third-Party UI Parent</name>
+  <description>Parent project for packaging and deploying third-party UI libraries to Maven repositories.</description>
+  <packaging>pom</packaging>
+
+  <url>https://github.com/WrenSecurity/wrensec-ui-third-party</url>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/WrenSecurity/wrensec-ui-third-party/issues</url>
+  </issueManagement>
+
+  <scm>
+    <url>https://github.com/WrenSecurity/wrensec-ui-third-party</url>
+    <connection>scm:git:git://github.com/WrenSecurity/wrensec-ui-third-party.git</connection>
+    <developerConnection>scm:git:git@github.com:WrenSecurity/wrensec-ui-third-party.git</developerConnection>
+  </scm>
+
+  <repositories>
+    <!-- Needed to retrieve parent POM -->
+    <repository>
+      <id>wrensecurity-releases</id>
+      <name>Wren Security Release Repository</name>
+      <url>https://wrensecurity.jfrog.io/wrensecurity/releases</url>
+
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </repository>
+  </repositories>
+
+  <modules>
+    <module>bootstrap-dialog</module>
+  </modules>
+
+  <properties>
+    <!-- Defaults: All null. -->
+    <jsPackageFiles></jsPackageFiles>
+    <jsClassifier></jsClassifier>
+    
+    <cssPackageFiles></cssPackageFiles>
+    <cssClassifier></cssClassifier>
+  </properties>
+
+  <profiles>  
+    <profile>
+      <!-- 
+      Disables built-in signing from the parent POM. Otherwise, we end-up
+      signing the signature ASC files during deployment.
+      -->
+      <id>sign</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>none</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>  
+  
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.soebes.maven.plugins</groupId>
+          <artifactId>iterator-maven-plugin</artifactId>
+          <version>0.5.1</version>
+          <executions>
+            <execution>
+              <id>install-js</id>
+              <phase>package</phase>
+
+              <goals>
+                <goal>iterator</goal>
+              </goals>
+
+              <configuration>
+                <content>${jsPackageFiles}</content>
+                <iteratorName>filename</iteratorName>
+
+                <pluginExecutors>
+                  <pluginExecutor>
+                    <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-install-plugin</artifactId>
+                      <version>2.5.2</version>
+                    </plugin>
+
+                    <goal>install-file</goal>
+
+                    <configuration>
+                      <pomFile>${project.basedir}/pom.xml</pomFile>
+                      
+                      <file>${project.basedir}/@filename@</file>
+                      <classifier>${jsClassifier}</classifier>
+                      <packaging>js</packaging>
+                    </configuration>
+                  </pluginExecutor>
+                </pluginExecutors>
+              </configuration>
+            </execution>
+
+            <execution>
+              <id>deploy-js</id>
+              <phase>deploy</phase>
+
+              <goals>
+                <goal>iterator</goal>
+              </goals>
+
+              <configuration>
+                <content>${jsPackageFiles}</content>
+                <iteratorName>filename</iteratorName>
+
+                <pluginExecutors>
+                  <pluginExecutor>
+                    <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-gpg-plugin</artifactId>
+                      <version>1.6</version>
+                    </plugin>
+
+                    <goal>sign-and-deploy-file</goal>
+
+                    <configuration>
+                      <repositoryId>wrensecurity-releases</repositoryId>
+                      <url>${forgerockDistMgmtReleasesUrl}</url>
+
+                      <pomFile>${project.basedir}/pom.xml</pomFile>
+                      
+                      <file>${project.basedir}/@filename@</file>
+                      <classifier>${jsClassifier}</classifier>
+                      <packaging>js</packaging>
+                      
+                      <ascDirectory>${project.basedir}/target/gpg</ascDirectory>
+                    </configuration>
+                  </pluginExecutor>
+                </pluginExecutors>
+              </configuration>
+            </execution>
+
+            <execution>
+              <id>install-css</id>
+              <phase>package</phase>
+
+              <goals>
+                <goal>iterator</goal>
+              </goals>
+
+              <configuration>
+                <content>${cssPackageFiles}</content>
+                <iteratorName>filename</iteratorName>
+
+                <pluginExecutors>
+                  <pluginExecutor>
+                    <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-install-plugin</artifactId>
+                      <version>2.5.2</version>
+                    </plugin>
+
+                    <goal>install-file</goal>
+
+                    <configuration>
+                      <pomFile>${project.basedir}/pom.xml</pomFile>
+                      
+                      <file>${project.basedir}/@filename@</file>
+                      <classifier>${cssClassifier}</classifier>
+                      <packaging>css</packaging>
+                    </configuration>
+                  </pluginExecutor>
+                </pluginExecutors>
+              </configuration>
+            </execution>
+
+            <execution>
+              <id>deploy-css</id>
+              <phase>deploy</phase>
+
+              <goals>
+                <goal>iterator</goal>
+              </goals>
+
+              <configuration>
+                <content>${cssPackageFiles}</content>
+                <iteratorName>filename</iteratorName>
+
+                <pluginExecutors>
+                  <pluginExecutor>
+                    <plugin>
+                      <groupId>org.apache.maven.plugins</groupId>
+                      <artifactId>maven-gpg-plugin</artifactId>
+                      <version>1.6</version>
+                    </plugin>
+
+                    <goal>sign-and-deploy-file</goal>
+
+                    <configuration>
+                      <repositoryId>wrensecurity-releases</repositoryId>
+                      <url>${forgerockDistMgmtReleasesUrl}</url>
+
+                      <pomFile>${project.basedir}/pom.xml</pomFile>
+                      
+                      <file>${project.basedir}/@filename@</file>
+                      <classifier>${cssClassifier}</classifier>
+                      <packaging>css</packaging>
+                      
+                      <ascDirectory>${project.basedir}/target/gpg</ascDirectory>
+                    </configuration>
+                  </pluginExecutor>
+                </pluginExecutors>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
