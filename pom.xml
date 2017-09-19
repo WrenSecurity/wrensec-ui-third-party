@@ -128,7 +128,6 @@
                     <plugin>
                       <groupId>org.apache.maven.plugins</groupId>
                       <artifactId>maven-install-plugin</artifactId>
-                      <version>2.5.2</version>
                     </plugin>
 
                     <goal>install-file</goal>
@@ -162,7 +161,6 @@
                     <plugin>
                       <groupId>org.apache.maven.plugins</groupId>
                       <artifactId>maven-gpg-plugin</artifactId>
-                      <version>1.6</version>
                     </plugin>
 
                     <goal>sign-and-deploy-file</goal>
@@ -201,7 +199,6 @@
                     <plugin>
                       <groupId>org.apache.maven.plugins</groupId>
                       <artifactId>maven-install-plugin</artifactId>
-                      <version>2.5.2</version>
                     </plugin>
 
                     <goal>install-file</goal>
@@ -235,7 +232,6 @@
                     <plugin>
                       <groupId>org.apache.maven.plugins</groupId>
                       <artifactId>maven-gpg-plugin</artifactId>
-                      <version>1.6</version>
                     </plugin>
 
                     <goal>sign-and-deploy-file</goal>
