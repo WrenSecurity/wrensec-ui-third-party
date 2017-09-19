@@ -69,6 +69,8 @@
   </modules>
 
   <properties>
+    <targetAscDirectory>${project.basedir}/target/gpg</targetAscDirectory>
+  
     <!-- Defaults: All null. -->
     <jsPackageFiles></jsPackageFiles>
     <jsClassifier></jsClassifier>
@@ -175,7 +177,7 @@
                       <classifier>${jsClassifier}</classifier>
                       <packaging>js</packaging>
                       
-                      <ascDirectory>${project.basedir}/target/gpg</ascDirectory>
+                      <ascDirectory>${targetAscDirectory}</ascDirectory>
                     </configuration>
                   </pluginExecutor>
                 </pluginExecutors>
@@ -248,7 +250,7 @@
                       <classifier>${cssClassifier}</classifier>
                       <packaging>css</packaging>
                       
-                      <ascDirectory>${project.basedir}/target/gpg</ascDirectory>
+                      <ascDirectory>${targetAscDirectory}</ascDirectory>
                     </configuration>
                   </pluginExecutor>
                 </pluginExecutors>
