@@ -30,9 +30,10 @@
   <groupId>org.wrensecurity</groupId>
   <artifactId>wrensec-ui-third-party</artifactId>
   <version>0.1-SNAPSHOT</version>
-  <name>Wren Security Third-Party UI Parent</name>
-  <description>Parent project for packaging and deploying third-party UI libraries to Maven repositories.</description>
   <packaging>pom</packaging>
+
+  <name>Wren Security Third-Party UI - Parent</name>
+  <description>Parent project for packaging and deploying third-party UI libraries to Maven repositories.</description>
 
   <url>https://github.com/WrenSecurity/wrensec-ui-third-party</url>
 
