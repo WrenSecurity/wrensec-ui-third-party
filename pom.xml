@@ -70,18 +70,18 @@
 
   <properties>
     <targetAscDirectory>${project.basedir}/target/gpg</targetAscDirectory>
-  
+
     <!-- Defaults: All null. -->
     <jsPackageFiles></jsPackageFiles>
     <jsClassifier></jsClassifier>
-    
+
     <cssPackageFiles></cssPackageFiles>
     <cssClassifier></cssClassifier>
   </properties>
 
-  <profiles>  
+  <profiles>
     <profile>
-      <!-- 
+      <!--
       Disables built-in signing from the parent POM. Otherwise, we end-up
       signing the signature ASC files during deployment.
       -->
@@ -101,8 +101,8 @@
         </plugins>
       </build>
     </profile>
-  </profiles>  
-  
+  </profiles>
+
   <build>
     <pluginManagement>
       <plugins>
@@ -135,7 +135,7 @@
 
                     <configuration>
                       <pomFile>${project.basedir}/pom.xml</pomFile>
-                      
+
                       <file>${project.basedir}/@filename@</file>
                       <classifier>${jsClassifier}</classifier>
                       <packaging>js</packaging>
@@ -172,11 +172,11 @@
                       <url>${forgerockDistMgmtReleasesUrl}</url>
 
                       <pomFile>${project.basedir}/pom.xml</pomFile>
-                      
+
                       <file>${project.basedir}/@filename@</file>
                       <classifier>${jsClassifier}</classifier>
                       <packaging>js</packaging>
-                      
+
                       <ascDirectory>${targetAscDirectory}</ascDirectory>
                     </configuration>
                   </pluginExecutor>
@@ -208,7 +208,7 @@
 
                     <configuration>
                       <pomFile>${project.basedir}/pom.xml</pomFile>
-                      
+
                       <file>${project.basedir}/@filename@</file>
                       <classifier>${cssClassifier}</classifier>
                       <packaging>css</packaging>
@@ -245,11 +245,11 @@
                       <url>${forgerockDistMgmtReleasesUrl}</url>
 
                       <pomFile>${project.basedir}/pom.xml</pomFile>
-                      
+
                       <file>${project.basedir}/@filename@</file>
                       <classifier>${cssClassifier}</classifier>
                       <packaging>css</packaging>
-                      
+
                       <ascDirectory>${targetAscDirectory}</ascDirectory>
                     </configuration>
                   </pluginExecutor>
