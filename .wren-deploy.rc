@@ -1,0 +1,3 @@
+export MAVEN_PACKAGE="wrensec-ui-third-party"
+export BINTRAY_PACKAGE="wrensec-ui-third-party"
+export JFROG_PACKAGE="org/forgerock/commons/ui/libs"
