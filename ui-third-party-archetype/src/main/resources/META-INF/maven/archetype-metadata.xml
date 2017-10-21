@@ -26,17 +26,9 @@
   </fileSets>
 
   <requiredProperties>
-    <requiredProperty key="libraryName">
-      <defaultValue>my-project</defaultValue>
-    </requiredProperty>
-
-    <requiredProperty key="libraryDescription">
-      <defaultValue>Does awesome things with JavaScript and CSS.</defaultValue>
-    </requiredProperty>
-
-    <requiredProperty key="libraryVersion">
-      <defaultValue>1.0.0</defaultValue>
-    </requiredProperty>
+    <requiredProperty key="libraryName" />
+    <requiredProperty key="libraryDescription" />
+    <requiredProperty key="libraryVersion" />
 
     <requiredProperty key="jsDisabled">
       <defaultValue>false</defaultValue>
@@ -54,12 +46,8 @@
       <defaultValue>min</defaultValue>
     </requiredProperty>
 
-    <requiredProperty key="licenseName">
-      <defaultValue>MIT</defaultValue>
-    </requiredProperty>
+    <requiredProperty key="licenseName" />
 
-    <requiredProperty key="licenseUrl">
-      <defaultValue>https://opensource.org/licenses/MIT</defaultValue>
-    </requiredProperty>
+    <requiredProperty key="licenseUrl" />
   </requiredProperties>
 </archetype-descriptor>
