@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.wrensecurity.commons.ui.libs</groupId>
     <artifactId>jquery.ba-dotimeout-parent</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
 
   <groupId>org.forgerock.commons.ui.libs</groupId>
