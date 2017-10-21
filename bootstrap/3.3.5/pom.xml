@@ -26,15 +26,8 @@
     </license>
   </licenses>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>com.soebes.maven.plugins</groupId>
-        <artifactId>iterator-maven-plugin</artifactId>
-        <!--
-          By default, both JS and CSS executions are automatically inherited.
-          -->
-      </plugin>
-    </plugins>
-  </build>
+  <properties>
+    <skipJs>false</skipJs>
+    <skipCss>false</skipCss>
+  </properties>
 </project>

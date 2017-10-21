@@ -73,12 +73,9 @@
   <properties>
     <targetAscDirectory>${project.basedir}/target/gpg</targetAscDirectory>
 
-    <!-- Defaults: All null. -->
-    <jsPackageFiles></jsPackageFiles>
-    <jsClassifier></jsClassifier>
-
-    <cssPackageFiles></cssPackageFiles>
-    <cssClassifier></cssClassifier>
+    <!-- Defaults: To be overridden in child POMs, as needed. -->
+    <skipJs>true</skipJs>
+    <skipCss>true</skipCss>
   </properties>
 
   <profiles>
@@ -106,157 +103,163 @@
   </profiles>
 
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>com.soebes.maven.plugins</groupId>
-          <artifactId>iterator-maven-plugin</artifactId>
-          <version>0.5.1</version>
-          <executions>
-            <execution>
-              <id>install-js</id>
-              <phase>package</phase>
+    <plugins>
+      <plugin>
+        <groupId>com.soebes.maven.plugins</groupId>
+        <artifactId>iterator-maven-plugin</artifactId>
+        <version>0.5.1</version>
+        <executions>
+          <execution>
+            <id>install-js</id>
+            <phase>package</phase>
 
-              <goals>
-                <goal>iterator</goal>
-              </goals>
+            <goals>
+              <goal>iterator</goal>
+            </goals>
 
-              <configuration>
-                <content>${jsPackageFiles}</content>
-                <iteratorName>filename</iteratorName>
+            <configuration>
+              <skip>${skipJs}</skip>
 
-                <pluginExecutors>
-                  <pluginExecutor>
-                    <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-install-plugin</artifactId>
-                    </plugin>
+              <content>${jsPackageFiles}</content>
+              <iteratorName>filename</iteratorName>
 
-                    <goal>install-file</goal>
+              <pluginExecutors>
+                <pluginExecutor>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                  </plugin>
 
-                    <configuration>
-                      <pomFile>${project.basedir}/pom.xml</pomFile>
+                  <goal>install-file</goal>
 
-                      <file>${project.basedir}/@filename@</file>
-                      <classifier>${jsClassifier}</classifier>
-                      <packaging>js</packaging>
-                    </configuration>
-                  </pluginExecutor>
-                </pluginExecutors>
-              </configuration>
-            </execution>
+                  <configuration>
+                    <pomFile>${project.basedir}/pom.xml</pomFile>
 
-            <execution>
-              <id>deploy-js</id>
-              <phase>deploy</phase>
+                    <file>${project.basedir}/@filename@</file>
+                    <classifier>${jsClassifier}</classifier>
+                    <packaging>js</packaging>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
 
-              <goals>
-                <goal>iterator</goal>
-              </goals>
+          <execution>
+            <id>deploy-js</id>
+            <phase>deploy</phase>
 
-              <configuration>
-                <content>${jsPackageFiles}</content>
-                <iteratorName>filename</iteratorName>
+            <goals>
+              <goal>iterator</goal>
+            </goals>
 
-                <pluginExecutors>
-                  <pluginExecutor>
-                    <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-gpg-plugin</artifactId>
-                    </plugin>
+            <configuration>
+              <skip>${skipJs}</skip>
 
-                    <goal>sign-and-deploy-file</goal>
+              <content>${jsPackageFiles}</content>
+              <iteratorName>filename</iteratorName>
 
-                    <configuration>
-                      <repositoryId>wrensecurity-releases</repositoryId>
-                      <url>${forgerockDistMgmtReleasesUrl}</url>
+              <pluginExecutors>
+                <pluginExecutor>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                  </plugin>
 
-                      <pomFile>${project.basedir}/pom.xml</pomFile>
+                  <goal>sign-and-deploy-file</goal>
 
-                      <file>${project.basedir}/@filename@</file>
-                      <classifier>${jsClassifier}</classifier>
-                      <packaging>js</packaging>
+                  <configuration>
+                    <repositoryId>wrensecurity-releases</repositoryId>
+                    <url>${forgerockDistMgmtReleasesUrl}</url>
 
-                      <ascDirectory>${targetAscDirectory}</ascDirectory>
-                    </configuration>
-                  </pluginExecutor>
-                </pluginExecutors>
-              </configuration>
-            </execution>
+                    <pomFile>${project.basedir}/pom.xml</pomFile>
 
-            <execution>
-              <id>install-css</id>
-              <phase>package</phase>
+                    <file>${project.basedir}/@filename@</file>
+                    <classifier>${jsClassifier}</classifier>
+                    <packaging>js</packaging>
 
-              <goals>
-                <goal>iterator</goal>
-              </goals>
+                    <ascDirectory>${targetAscDirectory}</ascDirectory>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
 
-              <configuration>
-                <content>${cssPackageFiles}</content>
-                <iteratorName>filename</iteratorName>
+          <execution>
+            <id>install-css</id>
+            <phase>package</phase>
 
-                <pluginExecutors>
-                  <pluginExecutor>
-                    <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-install-plugin</artifactId>
-                    </plugin>
+            <goals>
+              <goal>iterator</goal>
+            </goals>
 
-                    <goal>install-file</goal>
+            <configuration>
+              <skip>${skipCss}</skip>
 
-                    <configuration>
-                      <pomFile>${project.basedir}/pom.xml</pomFile>
+              <content>${cssPackageFiles}</content>
+              <iteratorName>filename</iteratorName>
 
-                      <file>${project.basedir}/@filename@</file>
-                      <classifier>${cssClassifier}</classifier>
-                      <packaging>css</packaging>
-                    </configuration>
-                  </pluginExecutor>
-                </pluginExecutors>
-              </configuration>
-            </execution>
+              <pluginExecutors>
+                <pluginExecutor>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                  </plugin>
 
-            <execution>
-              <id>deploy-css</id>
-              <phase>deploy</phase>
+                  <goal>install-file</goal>
 
-              <goals>
-                <goal>iterator</goal>
-              </goals>
+                  <configuration>
+                    <pomFile>${project.basedir}/pom.xml</pomFile>
 
-              <configuration>
-                <content>${cssPackageFiles}</content>
-                <iteratorName>filename</iteratorName>
+                    <file>${project.basedir}/@filename@</file>
+                    <classifier>${cssClassifier}</classifier>
+                    <packaging>css</packaging>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
 
-                <pluginExecutors>
-                  <pluginExecutor>
-                    <plugin>
-                      <groupId>org.apache.maven.plugins</groupId>
-                      <artifactId>maven-gpg-plugin</artifactId>
-                    </plugin>
+          <execution>
+            <id>deploy-css</id>
+            <phase>deploy</phase>
 
-                    <goal>sign-and-deploy-file</goal>
+            <goals>
+              <goal>iterator</goal>
+            </goals>
 
-                    <configuration>
-                      <repositoryId>wrensecurity-releases</repositoryId>
-                      <url>${forgerockDistMgmtReleasesUrl}</url>
+            <configuration>
+              <skip>${skipCss}</skip>
 
-                      <pomFile>${project.basedir}/pom.xml</pomFile>
+              <content>${cssPackageFiles}</content>
+              <iteratorName>filename</iteratorName>
 
-                      <file>${project.basedir}/@filename@</file>
-                      <classifier>${cssClassifier}</classifier>
-                      <packaging>css</packaging>
+              <pluginExecutors>
+                <pluginExecutor>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                  </plugin>
 
-                      <ascDirectory>${targetAscDirectory}</ascDirectory>
-                    </configuration>
-                  </pluginExecutor>
-                </pluginExecutors>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-      </plugins>
-    </pluginManagement>
+                  <goal>sign-and-deploy-file</goal>
+
+                  <configuration>
+                    <repositoryId>wrensecurity-releases</repositoryId>
+                    <url>${forgerockDistMgmtReleasesUrl}</url>
+
+                    <pomFile>${project.basedir}/pom.xml</pomFile>
+
+                    <file>${project.basedir}/@filename@</file>
+                    <classifier>${cssClassifier}</classifier>
+                    <packaging>css</packaging>
+
+                    <ascDirectory>${targetAscDirectory}</ascDirectory>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 </project>
