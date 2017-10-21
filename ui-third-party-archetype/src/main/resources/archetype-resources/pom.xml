@@ -37,7 +37,7 @@
     <jsPackageFiles>${artifactId}-${project.version}-${jsClassifier}.js</jsPackageFiles>
     <jsClassifier>${jsClassifier}</jsClassifier>
 
-    <cssPackageFiles>${artifactId}-${project.version}-${cssClassifier}.js</cssPackageFiles>
+    <cssPackageFiles>${artifactId}-${project.version}-${cssClassifier}.css</cssPackageFiles>
     <cssClassifier>${cssClassifier}</cssClassifier>
   </properties>
 
