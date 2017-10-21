@@ -68,6 +68,7 @@
   <modules>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
+    <module>jquery.ba-dotimeout</module>
   </modules>
 
   <properties>
