@@ -46,8 +46,12 @@
       <defaultValue>min</defaultValue>
     </requiredProperty>
 
-    <requiredProperty key="licenseName" />
+    <requiredProperty key="licenseName">
+      <defaultValue>MIT</defaultValue>
+    </requiredProperty>
 
-    <requiredProperty key="licenseUrl" />
+    <requiredProperty key="licenseUrl">
+      <defaultValue>https://opensource.org/licenses/MIT</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 </archetype-descriptor>
