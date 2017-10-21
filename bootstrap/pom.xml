@@ -9,40 +9,22 @@
     <version>0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.forgerock.commons.ui.libs</groupId>
-  <artifactId>bootstrap</artifactId>
-  <version>3.3.5</version>
+  <groupId>org.wrensecurity.commons.ui.libs</groupId>
+  <artifactId>bootstrap-parent</artifactId>
+  <version>0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Bootstrap</name>
-  <description>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</description>
-
-  <licenses>
-    <license>
-      <name>MIT</name>
-      <url>http://opensource.org/licenses/MIT</url>
-      <distribution>https://github.com/twbs/bootstrap/tree/v3.3.5</distribution>
-      <comments>Copyright (c) 2011-2015 Twitter, Inc</comments>
-    </license>
-  </licenses>
+  <name>Wren Security Third-Party UI - Bootstrap - Parent</name>
 
   <properties>
-    <jsPackageFiles>bootstrap-3.3.5-custom.js</jsPackageFiles>
+    <jsPackageFiles>bootstrap-${project.version}-custom.js</jsPackageFiles>
     <jsClassifier>custom</jsClassifier>
 
-    <cssPackageFiles>bootstrap-3.3.5-custom.css</cssPackageFiles>
+    <cssPackageFiles>bootstrap-${project.version}-custom.css</cssPackageFiles>
     <cssClassifier>custom</cssClassifier>
   </properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>com.soebes.maven.plugins</groupId>
-        <artifactId>iterator-maven-plugin</artifactId>
-        <!--
-          By default, both JS and CSS executions are automatically inherited.
-          -->
-      </plugin>
-    </plugins>
-  </build>
+  <modules>
+    <module>3.3.5</module>
+  </modules>
 </project>
