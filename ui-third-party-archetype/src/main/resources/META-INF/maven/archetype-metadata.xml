@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   The contents of this file are subject to the terms of the Common Development
+   and Distribution License (the License). You may not use this file except in
+   compliance with the License.
+
+   You can obtain a copy of the License at legal/CDDLv1.0.txt. See the License
+   for the specific language governing permission and limitations under the
+   License.
+
+   When distributing Covered Software, include this CDDL Header Notice in each
+   file and include the License file at legal/CDDLv1.0.txt. If applicable, add
+   the following below the CDDL Header, with the fields enclosed by brackets []
+   replaced by your own identifying information: "Portions copyright [year]
+   [name of copyright owner]".
+
+   Copyright 2017 Wren Security.
+-->
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="sample-parent"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory />
+    </fileSet>
+  </fileSets>
+
+  <requiredProperties>
+    <requiredProperty key="libraryName">
+      <defaultValue>my-project</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="libraryDescription">
+      <defaultValue>Does awesome things with JavaScript and CSS.</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="libraryVersion">
+      <defaultValue>1.0.0</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="jsDisabled">
+      <defaultValue>false</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="jsClassifier">
+      <defaultValue>min</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="cssDisabled">
+      <defaultValue>false</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="cssClassifier">
+      <defaultValue>min</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="licenseName">
+      <defaultValue>MIT</defaultValue>
+    </requiredProperty>
+
+    <requiredProperty key="licenseUrl">
+      <defaultValue>https://opensource.org/licenses/MIT</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+</archetype-descriptor>
