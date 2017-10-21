@@ -68,6 +68,7 @@
     <module>jquery.ba-dotimeout</module>
     <module>moment</module>
     <module>handlebars</module>
+    <module>i18next</module>
   </modules>
 
   <properties>
