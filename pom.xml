@@ -27,8 +27,8 @@
     <version>2.0.7</version>
   </parent>
 
-  <groupId>org.wrensecurity</groupId>
-  <artifactId>wrensec-ui-third-party</artifactId>
+  <groupId>org.wrensecurity.commons.ui.libs</groupId>
+  <artifactId>ui-third-party-parent</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
