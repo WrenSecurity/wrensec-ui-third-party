@@ -67,6 +67,7 @@
     <module>backbone.paginator</module>
     <module>backbone-relational</module>
     <module>backgrid</module>
+    <module>backgrid-filter</module>
     <module>backgrid-paginator</module>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
