@@ -72,6 +72,7 @@
     <module>backgrid-select-all</module>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
+    <module>font-awesome</module>
     <module>form2js</module>
     <module>handlebars</module>
     <module>i18next</module>
@@ -94,6 +95,7 @@
     <!-- Defaults: To be overridden in child POMs, as needed. -->
     <skipJs>true</skipJs>
     <skipCss>true</skipCss>
+    <skipZip>true</skipZip>
   </properties>
 
   <profiles>
@@ -269,6 +271,81 @@
                     <file>${project.basedir}/@filename@</file>
                     <classifier>${cssClassifier}</classifier>
                     <packaging>css</packaging>
+
+                    <ascDirectory>${targetAscDirectory}</ascDirectory>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>install-zip</id>
+            <phase>package</phase>
+
+            <goals>
+              <goal>iterator</goal>
+            </goals>
+
+            <configuration>
+              <skip>${skipZip}</skip>
+
+              <content>${zipPackageFiles}</content>
+              <iteratorName>filename</iteratorName>
+
+              <pluginExecutors>
+                <pluginExecutor>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                  </plugin>
+
+                  <goal>install-file</goal>
+
+                  <configuration>
+                    <pomFile>${project.basedir}/pom.xml</pomFile>
+
+                    <file>${project.basedir}/@filename@</file>
+                    <classifier>${zipClassifier}</classifier>
+                    <packaging>zip</packaging>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>deploy-zip</id>
+            <phase>deploy</phase>
+
+            <goals>
+              <goal>iterator</goal>
+            </goals>
+
+            <configuration>
+              <skip>${skipZip}</skip>
+
+              <content>${zipPackageFiles}</content>
+              <iteratorName>filename</iteratorName>
+
+              <pluginExecutors>
+                <pluginExecutor>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                  </plugin>
+
+                  <goal>sign-and-deploy-file</goal>
+
+                  <configuration>
+                    <repositoryId>wrensecurity-releases</repositoryId>
+                    <url>${forgerockDistMgmtReleasesUrl}</url>
+
+                    <pomFile>${project.basedir}/pom.xml</pomFile>
+
+                    <file>${project.basedir}/@filename@</file>
+                    <classifier>${zipClassifier}</classifier>
+                    <packaging>zip</packaging>
 
                     <ascDirectory>${targetAscDirectory}</ascDirectory>
                   </configuration>
