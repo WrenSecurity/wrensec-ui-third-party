@@ -69,6 +69,7 @@
     <module>backgrid</module>
     <module>backgrid-filter</module>
     <module>backgrid-paginator</module>
+    <module>backgrid-select-all</module>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
     <module>handlebars</module>
