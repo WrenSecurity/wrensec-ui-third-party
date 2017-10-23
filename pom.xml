@@ -66,10 +66,10 @@
     <module>backbone</module>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
-    <module>jquery.ba-dotimeout</module>
-    <module>moment</module>
     <module>handlebars</module>
     <module>i18next</module>
+    <module>jquery.ba-dotimeout</module>
+    <module>moment</module>
     <module>requirejs</module>
   </modules>
 
