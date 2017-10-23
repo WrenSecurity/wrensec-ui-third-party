@@ -14,7 +14,7 @@
   <version>3.3.5</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Bootstrap</name>
+  <name>3rd Party UI - Bootstrap</name>
   <description>The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.</description>
 
   <licenses>

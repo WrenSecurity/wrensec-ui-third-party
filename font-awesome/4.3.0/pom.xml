@@ -30,7 +30,7 @@
   <version>4.3.0</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Font Awesome</name>
+  <name>3rd Party UI - Font Awesome</name>
   <description>The iconic font and CSS toolkit.</description>
 
   <licenses>

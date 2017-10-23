@@ -29,7 +29,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>Wren Security Third-Party UI - Project Archetype</name>
+  <name>3rd Party UI - Project Archetype</name>
   <description>This archetype provides the structure required to package up a third-party JS and/or CSS library.</description>
 
   <build>

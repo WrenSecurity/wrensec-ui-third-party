@@ -14,7 +14,7 @@
   <version>1.0</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - jQuery doTimeout</name>
+  <name>3rd Party UI - jQuery doTimeout</name>
   <description>Like setTimeout, but better!</description>
 
   <licenses>

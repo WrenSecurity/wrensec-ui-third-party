@@ -30,7 +30,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - HTML5 Placeholder jQuery Plugin - Parent</name>
+  <name>3rd Party UI - jQuery HTML5 Placeholder - Parent</name>
 
   <properties>
     <jsPackageFiles>jquery.placeholder-${project.version}.js</jsPackageFiles>

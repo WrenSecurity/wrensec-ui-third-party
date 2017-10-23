@@ -30,7 +30,7 @@
   <version>0.9.0</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Backbone-relational.js</name>
+  <name>3rd Party UI - Backbone-relational.js</name>
   <description>Get and set relations (one-to-one, one-to-many, many-to-one) for Backbone models.</description>
 
   <licenses>

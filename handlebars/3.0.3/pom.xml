@@ -30,7 +30,7 @@
   <version>3.0.3</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Handlebars</name>
+  <name>3rd Party UI - Handlebars</name>
   <description>Handlebars provides the power necessary to let you build semantic templates effectively with no frustration.</description>
 
   <licenses>

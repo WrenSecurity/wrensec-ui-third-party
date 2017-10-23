@@ -30,7 +30,7 @@
   <version>0.3.5</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Backgrid-Paginator</name>
+  <name>3rd Party UI - Backgrid-Paginator</name>
   <description>Paginator for Backgrid.js</description>
 
   <licenses>

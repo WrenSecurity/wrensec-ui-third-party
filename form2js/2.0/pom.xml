@@ -30,7 +30,7 @@
   <version>2.0</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - form2js</name>
+  <name>3rd Party UI - form2js</name>
   <description>Convenient way to collect structured form data into a JavaScript object.</description>
 
   <licenses>

@@ -30,7 +30,7 @@
   <version>${libraryVersion}</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - ${libraryName}</name>
+  <name>3rd Party UI - ${libraryName}</name>
   <description>${libraryDescription}</description>
 
   <licenses>

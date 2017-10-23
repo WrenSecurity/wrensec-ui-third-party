@@ -30,7 +30,7 @@
   <version>0.12.1</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Selectize.js</name>
+  <name>3rd Party UI - Selectize.js</name>
   <description>A jQuery-based hybrid of a textbox and &lt;select&gt; box.</description>
 
   <licenses>

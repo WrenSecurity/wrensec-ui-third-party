@@ -30,7 +30,7 @@
   <version>3.10.1</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Lodash</name>
+  <name>3rd Party UI - Lodash</name>
   <description>A modern JavaScript utility library delivering modularity, performance, &amp; extras.</description>
 
   <licenses>

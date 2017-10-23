@@ -30,7 +30,7 @@
   <version>0.8</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - XDate</name>
+  <name>3rd Party UI - XDate</name>
   <description>A modern JavaScript Date library.</description>
 
   <licenses>

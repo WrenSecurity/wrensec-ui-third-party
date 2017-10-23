@@ -31,7 +31,7 @@
   <version>${version}</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - ${libraryName} - Parent</name>
+  <name>3rd Party UI - ${libraryName} - Parent</name>
 
   <properties>
     <jsPackageFiles>${artifactId}-${project.version}-${jsClassifier}.js</jsPackageFiles>

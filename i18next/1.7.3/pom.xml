@@ -30,7 +30,7 @@
   <version>1.7.3</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - i18next</name>
+  <name>3rd Party UI - i18next</name>
   <description>Learn once - translate everywhere: i18next internationalization ecosystem</description>
 
   <licenses>

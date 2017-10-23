@@ -30,7 +30,7 @@
   <version>2.1.14</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - RequireJS</name>
+  <name>3rd Party UI - RequireJS</name>
   <description>A file and module loader for JavaScript.</description>
 
   <licenses>

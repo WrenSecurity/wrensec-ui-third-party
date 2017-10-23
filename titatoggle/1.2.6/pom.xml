@@ -30,7 +30,7 @@
   <version>1.2.6</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - TiTatoggle</name>
+  <name>3rd Party UI - TiTatoggle</name>
   <description>Pure css toggle buttons based on the bootstrap checkbox pattern.</description>
 
   <licenses>

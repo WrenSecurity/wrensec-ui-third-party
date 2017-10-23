@@ -30,7 +30,7 @@
   <version>0.3.5</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - Backgrid-Select-All</name>
+  <name>3rd Party UI - Backgrid-Select-All</name>
   <description>Select-all extension for Backgrid.js.</description>
 
   <licenses>
