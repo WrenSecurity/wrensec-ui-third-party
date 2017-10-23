@@ -80,6 +80,7 @@
     <module>moment</module>
     <module>requirejs</module>
     <module>spin</module>
+    <module>xdate</module>
   </modules>
 
   <properties>
