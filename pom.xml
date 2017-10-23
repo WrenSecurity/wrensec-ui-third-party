@@ -82,6 +82,7 @@
     <module>lodash</module>
     <module>moment</module>
     <module>requirejs</module>
+    <module>selectize</module>
     <module>spin</module>
     <module>titatoggle</module>
     <module>xdate</module>
