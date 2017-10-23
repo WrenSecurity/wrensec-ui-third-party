@@ -20,12 +20,16 @@
   <licenses>
     <license>
       <name>MIT License</name>
-      <url>http://opensource.org/licenses/MIT</url>
+      <url>https://github.com/cowboy/jquery-dotimeout/blob/v1.0/LICENSE-MIT</url>
+      <distribution>https://github.com/cowboy/jquery-dotimeout/tree/v1.0</distribution>
+      <comments>Copyright (c) 2010 "Cowboy" Ben Alman</comments>
     </license>
 
     <license>
       <name>GPL-2.0</name>
-      <url>http://opensource.org/licenses/GPL-2.0</url>
+      <url>https://github.com/cowboy/jquery-dotimeout/blob/v1.0/LICENSE-GPL</url>
+      <distribution>https://github.com/cowboy/jquery-dotimeout/tree/v1.0</distribution>
+      <comments>Copyright (c) 2010 "Cowboy" Ben Alman</comments>
     </license>
   </licenses>
 

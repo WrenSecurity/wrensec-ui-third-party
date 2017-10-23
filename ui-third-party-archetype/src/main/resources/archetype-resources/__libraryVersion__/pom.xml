@@ -37,6 +37,8 @@
     <license>
       <name>${licenseName}</name>
       <url>${licenseUrl}</url>
+      <distribution>${licenseDistribution}</distribution>
+      <comments>${licenseCopyright}</comments>
     </license>
   </licenses>
 

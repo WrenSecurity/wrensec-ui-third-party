@@ -30,6 +30,11 @@
     <requiredProperty key="libraryDescription" />
     <requiredProperty key="libraryVersion" />
 
+    <requiredProperty key="licenseName" />
+    <requiredProperty key="licenseUrl" />
+    <requiredProperty key="licenseDistribution" />
+    <requiredProperty key="licenseCopyright" />
+
     <requiredProperty key="jsDisabled">
       <defaultValue>false</defaultValue>
     </requiredProperty>
@@ -44,14 +49,6 @@
 
     <requiredProperty key="cssClassifier">
       <defaultValue>min</defaultValue>
-    </requiredProperty>
-
-    <requiredProperty key="licenseName">
-      <defaultValue>MIT</defaultValue>
-    </requiredProperty>
-
-    <requiredProperty key="licenseUrl">
-      <defaultValue>https://opensource.org/licenses/MIT</defaultValue>
     </requiredProperty>
   </requiredProperties>
 </archetype-descriptor>

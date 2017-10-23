@@ -36,7 +36,9 @@
   <licenses>
     <license>
       <name>MIT</name>
-      <url>https://github.com/i18next/i18next/blob/master/LICENSE</url>
+      <url>https://github.com/i18next/i18next/blob/1.7.3/license</url>
+      <distribution>https://github.com/i18next/i18next/tree/1.7.3</distribution>
+      <comments>Copyright (c) 2011 Jan Mühlemann</comments>
     </license>
   </licenses>
 
