@@ -30,7 +30,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - form2js - Parent</name>
+  <name>Wren Security Third-Party UI - js2form - Parent</name>
 
   <properties>
     <jsPackageFiles>js2form-${project.version}.js</jsPackageFiles>

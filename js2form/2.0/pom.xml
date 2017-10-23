@@ -30,14 +30,13 @@
   <version>2.0</version>
   <packaging>pom</packaging>
 
-  <name>Wren Security Third-Party UI - form2js</name>
-  <description>Convenient way to collect structured form data into a JavaScript object.</description>
+  <name>Wren Security Third-Party UI - js2form</name>
+  <description>(The predecessor to form2js).</description>
 
   <licenses>
     <license>
       <name>MIT</name>
-      <url>https://github.com/maxatwork/form2js/blob/v2.0/license.txt</url>
-      <distribution>https://github.com/maxatwork/form2js/tree/v2.0</distribution>
+      <url>https://opensource.org/licenses/MIT</url>
       <comments>Copyright (c) 2010 Maxim Vasiliev</comments>
     </license>
   </licenses>
