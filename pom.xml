@@ -72,6 +72,7 @@
     <module>backgrid-select-all</module>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
+    <module>form2js</module>
     <module>handlebars</module>
     <module>i18next</module>
     <module>jquery</module>
