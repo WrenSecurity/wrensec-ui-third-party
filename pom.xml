@@ -74,6 +74,7 @@
     <module>bootstrap-dialog</module>
     <module>handlebars</module>
     <module>i18next</module>
+    <module>jquery</module>
     <module>jquery.ba-dotimeout</module>
     <module>moment</module>
     <module>requirejs</module>
