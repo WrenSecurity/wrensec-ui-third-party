@@ -65,6 +65,7 @@
   <modules>
     <module>backbone</module>
     <module>backbone.paginator</module>
+    <module>backbone-relational</module>
     <module>bootstrap</module>
     <module>bootstrap-dialog</module>
     <module>handlebars</module>
