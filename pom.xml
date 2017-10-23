@@ -76,6 +76,7 @@
     <module>i18next</module>
     <module>jquery</module>
     <module>jquery.ba-dotimeout</module>
+    <module>lodash</module>
     <module>moment</module>
     <module>requirejs</module>
   </modules>
