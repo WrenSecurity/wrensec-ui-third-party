@@ -79,6 +79,7 @@
     <module>lodash</module>
     <module>moment</module>
     <module>requirejs</module>
+    <module>spin</module>
   </modules>
 
   <properties>
