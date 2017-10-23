@@ -69,6 +69,7 @@
     <module>moment</module>
     <module>handlebars</module>
     <module>i18next</module>
+    <module>requirejs</module>
   </modules>
 
   <properties>
