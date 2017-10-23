@@ -83,6 +83,7 @@
     <module>moment</module>
     <module>requirejs</module>
     <module>spin</module>
+    <module>titatoggle</module>
     <module>xdate</module>
   </modules>
 
