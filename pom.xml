@@ -85,6 +85,7 @@
     <module>lodash</module>
     <module>moment</module>
     <module>qunit</module>
+    <module>r</module>
     <module>requirejs</module>
     <module>selectize</module>
     <module>sinon</module>
