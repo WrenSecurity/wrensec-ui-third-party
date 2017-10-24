@@ -81,6 +81,7 @@
     <module>jquery.ba-dotimeout</module>
     <module>jquery.placeholder</module>
     <module>js2form</module>
+    <module>less</module>
     <module>lodash</module>
     <module>moment</module>
     <module>qunit</module>
