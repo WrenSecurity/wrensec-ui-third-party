@@ -85,6 +85,7 @@
     <module>moment</module>
     <module>requirejs</module>
     <module>selectize</module>
+    <module>sinon</module>
     <module>spin</module>
     <module>titatoggle</module>
     <module>xdate</module>
