@@ -83,6 +83,7 @@
     <module>js2form</module>
     <module>lodash</module>
     <module>moment</module>
+    <module>qunit</module>
     <module>requirejs</module>
     <module>selectize</module>
     <module>sinon</module>
