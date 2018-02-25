@@ -82,6 +82,7 @@
     <module>jquery.placeholder</module>
     <module>jquery.nesting-sortable</module>
     <module>js2form</module>
+    <module>jsoneditor</module>
     <module>less</module>
     <module>lodash</module>
     <module>moment</module>
