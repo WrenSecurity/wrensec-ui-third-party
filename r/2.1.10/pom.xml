@@ -37,14 +37,14 @@
     <license>
       <name>BSD</name>
       <url>https://github.com/jrburke/r.js/blob/2.1.10/LICENSE</url>
-      <distribution>https://github.com/jrburke/r.js/tree/2.1.10</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2010-2011, The Dojo Foundation</comments>
     </license>
 
     <license>
       <name>MIT</name>
       <url>https://github.com/jrburke/r.js/blob/2.1.10/LICENSE</url>
-      <distribution>https://github.com/jrburke/r.js/tree/2.1.10</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2010-2011, The Dojo Foundation</comments>
     </license>
   </licenses>

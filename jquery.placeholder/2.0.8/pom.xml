@@ -31,13 +31,13 @@
   <packaging>pom</packaging>
 
   <name>3rd Party UI - jQuery HTML5 Placeholder</name>
-  <description>A jQuery plugin that enables HTML5 placeholder behavior for browsers that arenât trying hard enough yet.</description>
+  <description>A jQuery plugin that enables HTML5 placeholder behavior for browsers that aren't trying hard enough yet.</description>
 
   <licenses>
     <license>
       <name>MIT</name>
       <url>https://github.com/mathiasbynens/jquery-placeholder/blob/v2.0.8/LICENSE-MIT.txt</url>
-      <distribution>https://github.com/mathiasbynens/jquery-placeholder/tree/v2.0.8</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright Mathias Bynens</comments>
     </license>
   </licenses>

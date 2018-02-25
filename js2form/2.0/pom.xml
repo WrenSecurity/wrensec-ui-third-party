@@ -37,6 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2010 Maxim Vasiliev</comments>
     </license>
   </licenses>

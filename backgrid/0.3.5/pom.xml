@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/cloudflare/backgrid/blob/0.3.5/LICENSE-MIT</url>
-      <distribution>https://github.com/cloudflare/backgrid/tree/0.3.5</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2012 Jimmy Yuen Ho Wong</comments>
     </license>
   </licenses>

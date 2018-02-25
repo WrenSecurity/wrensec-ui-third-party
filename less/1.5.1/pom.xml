@@ -37,7 +37,7 @@
     <license>
       <name>Apache-2.0</name>
       <url>https://github.com/less/less.js/blob/v1.5.1/LICENSE</url>
-      <distribution>https://github.com/less/less.js/tree/v1.5.1</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2009-2013 Alexis Sellier &amp; The Core Less Team</comments>
     </license>
   </licenses>

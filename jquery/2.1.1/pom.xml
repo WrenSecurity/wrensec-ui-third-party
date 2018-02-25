@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/jquery/jquery/blob/2.1.1/MIT-LICENSE.txt</url>
-      <distribution>https://github.com/jquery/jquery/tree/2.1.1</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright 2014 jQuery Foundation and other contributors</comments>
     </license>
   </licenses>

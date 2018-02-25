@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/lodash/lodash/blob/3.10.1/LICENSE</url>
-      <distribution>https://github.com/lodash/lodash/tree/3.10.1</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright 2012-2015 The Dojo Foundation</comments>
     </license>
   </licenses>

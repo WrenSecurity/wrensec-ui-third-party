@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/jashkenas/backbone/blob/1.1.2/LICENSE</url>
-      <distribution>https://github.com/jashkenas/backbone/tree/1.1.2</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2010-2014 Jeremy Ashkenas, DocumentCloud</comments>
     </license>
   </licenses>

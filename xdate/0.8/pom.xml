@@ -37,14 +37,14 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/arshaw/xdate/blob/v0.8/MIT-LICENSE.txt</url>
-      <distribution>https://github.com/arshaw/xdate/tree/v0.8</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2011 Adam Shaw, http://arshaw.com/xdate/</comments>
     </license>
 
     <license>
       <name>GPL</name>
       <url>https://github.com/arshaw/xdate/blob/v0.8/GPL-LICENSE.txt</url>
-      <distribution>https://github.com/arshaw/xdate/tree/v0.8</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2011 Adam Shaw, http://arshaw.com/xdate/</comments>
     </license>
   </licenses>

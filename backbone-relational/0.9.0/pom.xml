@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/PaulUithol/Backbone-relational/blob/0.9.0/LICENSE.txt</url>
-      <distribution>https://github.com/PaulUithol/Backbone-relational/tree/0.9.0</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2011-2014 Paul Uithol, http://progressivecompany.nl/</comments>
     </license>
   </licenses>

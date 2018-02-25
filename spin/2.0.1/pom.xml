@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/fgnass/spin.js/blob/2.0.1/LICENSE.txt</url>
-      <distribution>https://github.com/fgnass/spin.js/tree/2.0.1</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2011-2014 Felix Gnass [fgnass at neteye dot de]</comments>
     </license>
   </licenses>

@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/qunitjs/qunit/blob/1.15.0/LICENSE.txt</url>
-      <distribution>https://github.com/qunitjs/qunit/tree/1.15.0</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright 2006, 2014 jQuery Foundation and other contributors</comments>
     </license>
   </licenses>

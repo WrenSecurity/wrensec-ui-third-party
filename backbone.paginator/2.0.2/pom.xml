@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/backbone-paginator/backbone.paginator/blob/2.0.2/LICENSE-MIT</url>
-      <distribution>https://github.com/backbone-paginator/backbone.paginator/tree/2.0.2</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2012-2014 Jimmy Yuen Ho Wong and contributors</comments>
     </license>
   </licenses>

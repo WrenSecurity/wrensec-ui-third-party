@@ -37,7 +37,7 @@
     <license>
       <name>BSD</name>
       <url>https://github.com/sinonjs/sinon/blob/v1.15.4/LICENSE</url>
-      <distribution>https://github.com/sinonjs/sinon/tree/v1.15.4</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2010-2014, Christian Johansen, christian@cjohansen.no</comments>
     </license>
   </licenses>

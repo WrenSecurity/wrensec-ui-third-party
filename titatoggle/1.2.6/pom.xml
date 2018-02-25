@@ -37,7 +37,7 @@
     <license>
       <name>BSD</name>
       <url>http://opensource.org/licenses/BSD-2-Clause</url>
-      <distribution>https://github.com/kleinejan/titatoggle/tree/v1.2.6</distribution>
+      <distribution>repo</distribution>
       <comments>https://github.com/kleinejan/titatoggle/blob/v1.2.6/package.json</comments>
     </license>
   </licenses>

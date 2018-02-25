@@ -37,7 +37,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/codemirror/CodeMirror/blob/4.10.0/LICENSE</url>
-      <distribution>https://github.com/codemirror/CodeMirror/tree/4.10.0</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (C) 2014 by Marijn Haverbeke and others</comments>
     </license>
   </licenses>

@@ -37,14 +37,14 @@
     <license>
       <name>MIT</name>
       <url>http://opensource.org/licenses/mit-license.html</url>
-      <distribution>http://fontawesome.io</distribution>
+      <distribution>repo</distribution>
       <comments>MIT Applies to all CSS and LESS files in the following directories: font-awesome/css/, font-awesome/less/, and font-awesome/scss/. @davegandy - http://fontawesome.io</comments>
     </license>
 
     <license>
       <name>SIL OFL 1.1</name>
       <url>http://scripts.sil.org/OFL</url>
-      <distribution>http://fontawesome.io</distribution>
+      <distribution>repo</distribution>
       <comments>SIL OFL 1.1 Applies to all desktop and webfont files in the following directory: font-awesome/fonts/ @davegandy - http://fontawesome.io</comments>
     </license>
   </licenses>

@@ -21,7 +21,7 @@
     <license>
       <name>MIT</name>
       <url>https://github.com/twbs/bootstrap/blob/v3.3.5/LICENSE</url>
-      <distribution>https://github.com/twbs/bootstrap/tree/v3.3.5</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2011-2015 Twitter, Inc</comments>
     </license>
   </licenses>

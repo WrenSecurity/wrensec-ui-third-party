@@ -37,7 +37,7 @@
     <license>
       <name>MIT License</name>
       <url>https://github.com/moment/moment/blob/2.8.1/LICENSE</url>
-      <distribution>https://github.com/moment/moment/tree/2.8.1</distribution>
+      <distribution>repo</distribution>
       <comments>Copyright (c) 2011-2014 Tim Wood, Iskren Chernev, Moment.js contributors</comments>
     </license>
   </licenses>
