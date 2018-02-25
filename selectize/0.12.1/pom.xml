@@ -35,7 +35,7 @@
 
   <licenses>
     <license>
-      <name>Apache License 2.0</name>
+      <name>Apache-2.0</name>
       <url>https://github.com/selectize/selectize.js/blob/v0.12.1/LICENSE</url>
       <distribution>repo</distribution>
       <comments>Copyright (c) Brian Reavis &amp; Contributors</comments>
