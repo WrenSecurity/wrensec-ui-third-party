@@ -25,7 +25,23 @@
  */
 
 
-var form2js = (function()
+(function (root, factory)
+{
+	if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+		// NodeJS
+		module.exports = factory();
+	}
+	else if (typeof define === 'function' && define.amd)
+	{
+		// AMD. Register as an anonymous module.
+		define(factory);
+	}
+	else
+	{
+		// Browser globals
+		root.form2js = factory();
+	}
+}(this, function ()
 {
 	"use strict";
 
@@ -39,8 +55,9 @@ var form2js = (function()
 	 * @param nodeCallback {Function} custom function to get node value
 	 * @param useIdIfEmptyName {Boolean} if true value of id attribute of field will be used if name of field is empty
 	 */
-	function form2js(rootNode, delimiter, skipEmpty, nodeCallback, useIdIfEmptyName)
+	function form2js(rootNode, delimiter, skipEmpty, nodeCallback, useIdIfEmptyName, getDisabled)
 	{
+		getDisabled = getDisabled ? true : false;
 		if (typeof skipEmpty == 'undefined' || skipEmpty == null) skipEmpty = true;
 		if (typeof delimiter == 'undefined' || delimiter == null) delimiter = '.';
 		if (arguments.length < 5) useIdIfEmptyName = false;
@@ -56,12 +73,12 @@ var form2js = (function()
 		{
 			while(currNode = rootNode[i++])
 			{
-				formValues = formValues.concat(getFormValues(currNode, nodeCallback, useIdIfEmptyName));
+				formValues = formValues.concat(getFormValues(currNode, nodeCallback, useIdIfEmptyName, getDisabled));
 			}
 		}
 		else
 		{
-			formValues = getFormValues(rootNode, nodeCallback, useIdIfEmptyName);
+			formValues = getFormValues(rootNode, nodeCallback, useIdIfEmptyName, getDisabled);
 		}
 
 		return processNameValues(formValues, skipEmpty, delimiter);
@@ -120,7 +137,7 @@ var form2js = (function()
 							namePart[k] = '[' + namePart[k] + ']';
 						}
 
-						arrIdx = namePart[k].match(/([a-z_]+)?\[([a-z_][a-z0-9]+?)\]/i);
+						arrIdx = namePart[k].match(/([a-z_]+)?\[([a-z_][a-z0-9_]+?)\]/i);
 						if (arrIdx)
 						{
 							for(l = 1; l < arrIdx.length; l++)
@@ -184,7 +201,7 @@ var form2js = (function()
 					{
 						if (!arrays[arrNameFull][arrIdx])
 						{
-							if ((/^[a-z_]+\[?/i).test(nameParts[j+1])) currResult[arrName].push({});
+							if ((/^[0-9a-z_]+\[?/i).test(nameParts[j+1])) currResult[arrName].push({});
 							else currResult[arrName].push([]);
 
 							arrays[arrNameFull][arrIdx] = currResult[arrName][currResult[arrName].length - 1];
@@ -213,27 +230,29 @@ var form2js = (function()
 		return result;
 	}
 
-    function getFormValues(rootNode, nodeCallback, useIdIfEmptyName)
+    function getFormValues(rootNode, nodeCallback, useIdIfEmptyName, getDisabled)
     {
-        var result = extractNodeValues(rootNode, nodeCallback, useIdIfEmptyName);
-        return result.length > 0 ? result : getSubFormValues(rootNode, nodeCallback, useIdIfEmptyName);
+        var result = extractNodeValues(rootNode, nodeCallback, useIdIfEmptyName, getDisabled);
+        return result.length > 0 ? result : getSubFormValues(rootNode, nodeCallback, useIdIfEmptyName, getDisabled);
     }
 
-    function getSubFormValues(rootNode, nodeCallback, useIdIfEmptyName)
+    function getSubFormValues(rootNode, nodeCallback, useIdIfEmptyName, getDisabled)
 	{
 		var result = [],
 			currentNode = rootNode.firstChild;
 		
 		while (currentNode)
 		{
-			result = result.concat(extractNodeValues(currentNode, nodeCallback, useIdIfEmptyName));
+			result = result.concat(extractNodeValues(currentNode, nodeCallback, useIdIfEmptyName, getDisabled));
 			currentNode = currentNode.nextSibling;
 		}
 
 		return result;
 	}
 
-    function extractNodeValues(node, nodeCallback, useIdIfEmptyName) {
+    function extractNodeValues(node, nodeCallback, useIdIfEmptyName, getDisabled) {
+        if (node.disabled && !getDisabled) return [];
+
         var callbackResult, fieldValue, result, fieldName = getFieldName(node, useIdIfEmptyName);
 
         callbackResult = nodeCallback && nodeCallback(node);
@@ -242,15 +261,19 @@ var form2js = (function()
             result = [callbackResult];
         }
         else if (fieldName != '' && node.nodeName.match(/INPUT|TEXTAREA/i)) {
-            fieldValue = getFieldValue(node);
-			result = [ { name: fieldName, value: fieldValue} ];
+            fieldValue = getFieldValue(node, getDisabled);
+            if (null === fieldValue) {
+                result = [];
+            } else {
+                result = [ { name: fieldName, value: fieldValue} ];
+            }
         }
         else if (fieldName != '' && node.nodeName.match(/SELECT/i)) {
-	        fieldValue = getFieldValue(node);
+	        fieldValue = getFieldValue(node, getDisabled);
 	        result = [ { name: fieldName.replace(/\[\]$/, ''), value: fieldValue } ];
         }
         else {
-            result = getSubFormValues(node, nodeCallback, useIdIfEmptyName);
+            result = getSubFormValues(node, nodeCallback, useIdIfEmptyName, getDisabled);
         }
 
         return result;
@@ -264,17 +287,20 @@ var form2js = (function()
 	}
 
 
-	function getFieldValue(fieldNode)
+	function getFieldValue(fieldNode, getDisabled)
 	{
-		if (fieldNode.disabled) return null;
+		if (fieldNode.disabled && !getDisabled) return null;
 		
 		switch (fieldNode.nodeName) {
 			case 'INPUT':
 			case 'TEXTAREA':
 				switch (fieldNode.type.toLowerCase()) {
 					case 'radio':
+			if (fieldNode.checked && fieldNode.value === "false") return false;
 					case 'checkbox':
-						if (fieldNode.checked) return fieldNode.value;
+                        if (fieldNode.checked && fieldNode.value === "true") return true;
+                        if (!fieldNode.checked && fieldNode.value === "true") return false;
+			if (fieldNode.checked) return fieldNode.value;
 						break;
 
 					case 'button':
@@ -320,4 +346,4 @@ var form2js = (function()
 
 	return form2js;
 
-})();
+}));
