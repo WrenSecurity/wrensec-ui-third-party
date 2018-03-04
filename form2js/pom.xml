@@ -38,6 +38,6 @@
   </properties>
 
   <modules>
-    <module>2.0</module>
+    <module>2.0-769718a</module>
   </modules>
 </project>
