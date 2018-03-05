@@ -93,6 +93,7 @@
     <module>selectize</module>
     <module>sinon</module>
     <module>spin</module>
+    <module>squire</module>
     <module>titatoggle</module>
     <module>xdate</module>
   </modules>
