@@ -21,24 +21,35 @@
 
   <parent>
     <groupId>org.wrensecurity.commons.ui.libs</groupId>
-    <artifactId>ui-third-party-parent</artifactId>
+    <artifactId>font-awesome</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
+  <groupId>org.forgerock.commons.ui.libs</groupId>
   <artifactId>font-awesome</artifactId>
-
-  <version>1.0-SNAPSHOT</version>
+  <version>4.5.0</version>
   <packaging>pom</packaging>
 
-  <name>3rd Party UI - Font Awesome - Parent</name>
+  <name>3rd Party UI - Font Awesome</name>
+  <description>The iconic font and CSS toolkit.</description>
+
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>http://opensource.org/licenses/mit-license.html</url>
+      <distribution>repo</distribution>
+      <comments>MIT Applies to all CSS and LESS files in the following directories: font-awesome/css/, font-awesome/less/, and font-awesome/scss/. @davegandy - http://fontawesome.io</comments>
+    </license>
+
+    <license>
+      <name>SIL OFL 1.1</name>
+      <url>http://scripts.sil.org/OFL</url>
+      <distribution>repo</distribution>
+      <comments>SIL OFL 1.1 Applies to all desktop and webfont files in the following directory: font-awesome/fonts/ @davegandy - http://fontawesome.io</comments>
+    </license>
+  </licenses>
 
   <properties>
-    <zipPackageFiles>font-awesome-${project.version}.zip</zipPackageFiles>
-    <zipClassifier />
+    <skipZip>false</skipZip>
   </properties>
-
-  <modules>
-    <module>4.3.0</module>
-    <module>4.5.0</module>
-  </modules>
 </project>
