@@ -86,6 +86,7 @@
     <module>jsoneditor</module>
     <module>less</module>
     <module>lodash</module>
+    <module>microplugin</module>
     <module>moment</module>
     <module>qunit</module>
     <module>r</module>
