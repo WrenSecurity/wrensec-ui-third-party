@@ -91,6 +91,7 @@
     <module>r</module>
     <module>requirejs</module>
     <module>selectize</module>
+    <module>sifter</module>
     <module>sinon</module>
     <module>spin</module>
     <module>titatoggle</module>
