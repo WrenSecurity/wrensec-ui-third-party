@@ -72,6 +72,7 @@
     <module>backgrid-select-all</module>
     <module>bootstrap</module>
     <module>bootstrap-clockpicker</module>
+    <module>bootstrap-datetimepicker</module>
     <module>bootstrap-dialog</module>
     <module>bootstrap-tabdrop</module>
     <module>CodeMirror</module>
