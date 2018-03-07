@@ -21,24 +21,28 @@
 
   <parent>
     <groupId>org.wrensecurity.commons.ui.libs</groupId>
-    <artifactId>ui-third-party-parent</artifactId>
+    <artifactId>microplugin</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>form2js</artifactId>
-
-  <version>1.0-SNAPSHOT</version>
+  <groupId>org.forgerock.commons.ui.libs</groupId>
+  <artifactId>microplugin</artifactId>
+  <version>0.0.3</version>
   <packaging>pom</packaging>
 
-  <name>3rd Party UI - form2js - Parent</name>
+  <name>3rd Party UI - microplugin.js</name>
+  <description>A lightweight plugin / dependency system for libraries.</description>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <!-- There is no LICENSE file in the repo. License is stated in readme file. -->
+      <url>https://github.com/brianreavis/sifter.js/blob/master/README.md</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
 
   <properties>
-    <jsPackageFiles>form2js-${project.version}.js</jsPackageFiles>
-    <jsClassifier />
+    <skipJs>false</skipJs>
   </properties>
-
-  <modules>
-    <module>2.0</module>
-    <module>2.0-769718a</module>
-  </modules>
 </project>

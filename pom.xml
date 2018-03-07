@@ -71,6 +71,7 @@
     <module>backgrid-paginator</module>
     <module>backgrid-select-all</module>
     <module>bootstrap</module>
+    <module>bootstrap-clockpicker</module>
     <module>bootstrap-datetimepicker</module>
     <module>bootstrap-dialog</module>
     <module>bootstrap-tabdrop</module>
@@ -87,11 +88,14 @@
     <module>jsoneditor</module>
     <module>less</module>
     <module>lodash</module>
+    <module>microplugin</module>
     <module>moment</module>
+    <module>qrcode</module>
     <module>qunit</module>
     <module>r</module>
     <module>requirejs</module>
     <module>selectize</module>
+    <module>sifter</module>
     <module>sinon</module>
     <module>spin</module>
     <module>titatoggle</module>

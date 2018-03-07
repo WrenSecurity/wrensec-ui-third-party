@@ -21,24 +21,30 @@
 
   <parent>
     <groupId>org.wrensecurity.commons.ui.libs</groupId>
-    <artifactId>ui-third-party-parent</artifactId>
+    <artifactId>qrcode</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>form2js</artifactId>
-
-  <version>1.0-SNAPSHOT</version>
+  <groupId>org.forgerock.commons.ui.libs</groupId>
+  <artifactId>qrcode</artifactId>
+  <!-- qrcode.js 1.0.0 Doesn't actually exist in https://github.com/davidshimjs/qrcodejs -->
+  <!-- This version was probably conjured up by FR because they needed a release. -->
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
-  <name>3rd Party UI - form2js - Parent</name>
+  <name>3rd Party UI - qrcode.js</name>
+  <description>Cross-browser QRCode generator for javascript.</description>
+
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <!-- There is no LICENSE file in the repo. License is stated in readme file. -->
+      <url>https://github.com/davidshimjs/qrcodejs/blob/master/README.md</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
 
   <properties>
-    <jsPackageFiles>form2js-${project.version}.js</jsPackageFiles>
-    <jsClassifier />
+    <skipJs>false</skipJs>
   </properties>
-
-  <modules>
-    <module>2.0</module>
-    <module>2.0-769718a</module>
-  </modules>
 </project>

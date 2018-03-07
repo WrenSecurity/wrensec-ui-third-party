@@ -25,20 +25,19 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>form2js</artifactId>
+  <artifactId>qrcode</artifactId>
 
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>3rd Party UI - form2js - Parent</name>
+  <name>3rd Party UI - qrcode.js - Parent</name>
 
   <properties>
-    <jsPackageFiles>form2js-${project.version}.js</jsPackageFiles>
-    <jsClassifier />
+    <jsPackageFiles>qrcode-${project.version}-min.js</jsPackageFiles>
+    <jsClassifier>min</jsClassifier>
   </properties>
 
   <modules>
-    <module>2.0</module>
-    <module>2.0-769718a</module>
+    <module>1.0.0</module>
   </modules>
 </project>
