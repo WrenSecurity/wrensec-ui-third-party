@@ -14,7 +14,7 @@
    replaced by your own identifying information: "Portions copyright [year]
    [name of copyright owner]".
 
-   Copyright 2017 Wren Security.
+   Copyright 2017-2018 Wren Security.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -27,7 +27,7 @@
 
   <groupId>org.forgerock.commons.ui.libs</groupId>
   <artifactId>backgrid-filter</artifactId>
-  <version>0.3.5</version>
+  <version>0.3.7</version>
   <packaging>pom</packaging>
 
   <name>3rd Party UI - Backgrid-Filter</name>
@@ -36,7 +36,7 @@
   <licenses>
     <license>
       <name>MIT</name>
-      <url>https://github.com/cloudflare/backgrid-filter/blob/0.3.5/LICENSE-MIT</url>
+      <url>https://github.com/cloudflare/backgrid-filter/blob/0.3.7/LICENSE-MIT</url>
       <distribution>repo</distribution>
       <comments>Copyright (c) 2012 Jimmy Yuen Ho Wong</comments>
     </license>
