@@ -103,6 +103,7 @@
     <module>xdate</module>
     <module>jquery-cron</module>
     <module>dragula</module>
+    <module>moment-timezone-with-data</module>
   </modules>
 
   <properties>
