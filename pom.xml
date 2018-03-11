@@ -101,6 +101,7 @@
     <module>squire</module>
     <module>titatoggle</module>
     <module>xdate</module>
+    <module>jquery-cron</module>
   </modules>
 
   <properties>
