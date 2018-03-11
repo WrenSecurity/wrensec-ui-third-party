@@ -102,6 +102,7 @@
     <module>titatoggle</module>
     <module>xdate</module>
     <module>jquery-cron</module>
+    <module>dragula</module>
   </modules>
 
   <properties>
