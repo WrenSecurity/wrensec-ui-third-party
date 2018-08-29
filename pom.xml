@@ -101,6 +101,7 @@
     <module>r</module>
     <module>react-bootstrap</module>
     <module>react-input-autosize</module>
+    <module>react-select</module>
     <module>requirejs</module>
     <module>selectize</module>
     <module>sifter</module>
