@@ -71,6 +71,7 @@
     <module>backgrid-filter</module>
     <module>backgrid-paginator</module>
     <module>backgrid-select-all</module>
+    <module>base64</module>
     <module>bootstrap</module>
     <module>bootstrap-clockpicker</module>
     <module>bootstrap-datetimepicker</module>
