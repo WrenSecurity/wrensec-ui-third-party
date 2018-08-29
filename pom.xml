@@ -100,6 +100,7 @@
     <module>qunit</module>
     <module>r</module>
     <module>react-bootstrap</module>
+    <module>react-input-autosize</module>
     <module>requirejs</module>
     <module>selectize</module>
     <module>sifter</module>
