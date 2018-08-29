@@ -102,6 +102,7 @@
     <module>react-bootstrap</module>
     <module>react-input-autosize</module>
     <module>react-select</module>
+    <module>redux</module>
     <module>requirejs</module>
     <module>selectize</module>
     <module>sifter</module>
