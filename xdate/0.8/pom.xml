@@ -14,7 +14,7 @@
    replaced by your own identifying information: "Portions copyright [year]
    [name of copyright owner]".
 
-   Copyright 2017 Wren Security.
+   Copyright 2017-2018 Wren Security.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -42,7 +42,7 @@
     </license>
 
     <license>
-      <name>GPL</name>
+      <name>GPL-2.0-or-later</name>
       <url>https://github.com/arshaw/xdate/blob/v0.8/GPL-LICENSE.txt</url>
       <distribution>repo</distribution>
       <comments>Copyright (c) 2011 Adam Shaw, http://arshaw.com/xdate/</comments>
