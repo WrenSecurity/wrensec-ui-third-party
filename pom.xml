@@ -71,11 +71,13 @@
     <module>backgrid-filter</module>
     <module>backgrid-paginator</module>
     <module>backgrid-select-all</module>
+    <module>base64</module>
     <module>bootstrap</module>
     <module>bootstrap-clockpicker</module>
     <module>bootstrap-datetimepicker</module>
     <module>bootstrap-dialog</module>
     <module>bootstrap-tabdrop</module>
+    <module>classnames</module>
     <module>CodeMirror</module>
     <module>dragula</module>
     <module>font-awesome</module>
@@ -97,6 +99,10 @@
     <module>qrcode</module>
     <module>qunit</module>
     <module>r</module>
+    <module>react-bootstrap</module>
+    <module>react-input-autosize</module>
+    <module>react-select</module>
+    <module>redux</module>
     <module>requirejs</module>
     <module>selectize</module>
     <module>sifter</module>
