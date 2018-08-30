@@ -35,8 +35,8 @@
 
   <licenses>
     <license>
-      <name>Modified BSD</name>
-      <url>http://www.xfree86.org/3.3.6/COPYRIGHT2.html</url>
+      <name>BSD-3-Clause</name>
+      <url>https://github.com/johnny/jquery-sortable/blob/master/LICENSE</url>
       <distribution>repo</distribution>
       <comments>Copyright (c) 2012 Jonas von Andrian</comments>
     </license>

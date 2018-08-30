@@ -14,7 +14,7 @@
    replaced by your own identifying information: "Portions copyright [year]
    [name of copyright owner]".
 
-   Copyright 2017 Wren Security.
+   Copyright 2017-2018 Wren Security.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -35,7 +35,7 @@
 
   <licenses>
     <license>
-      <name>BSD</name>
+      <name>BSD-2-Clause</name>
       <url>http://opensource.org/licenses/BSD-2-Clause</url>
       <distribution>repo</distribution>
       <comments>https://github.com/kleinejan/titatoggle/blob/v1.2.6/package.json</comments>

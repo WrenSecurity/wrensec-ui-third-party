@@ -43,8 +43,12 @@ Follow these steps to add the new library to this project:
    ```
 2. Follow the prompts and provide relevant answers for the library you are
    adding. Most of the information typically comes from the library's project
-   information on GitHub. Be sure to answer `Y` at the end to create the
-   wrapper project.
+   information on GitHub.
+   
+   **Licenses should be named according to their 
+   [SPDX Identifier](https://spdx.org/licenses/)**.
+   
+   Be sure to answer `Y` at the end to create the wrapper project.
 3. Copy the minified / release-grade JS and/or CSS files for the library into
    the `LIBRARY-NAME/VERSION` folder.
 4. Customize the POM found at `LIBRARY-NAME/pom.xml`, where `LIBRARY-NAME` is
